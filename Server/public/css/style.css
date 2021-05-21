@@ -1,0 +1,104 @@
+body {
+    font-family: Arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #DEDEDE;
+    color: #333;
+    padding: 20px 0 28px 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+}
+
+.animal {
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #FFF;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.animal h4 {
+    margin: 0 0 6px 0;
+}
+
+.pet-photo {
+    float: left;
+    width: 40%;
+    margin-right: 15px;
+}
+
+.pet-name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+}
+
+.species {
+    font-size: .9rem;
+    color: #888;
+    vertical-align: middle;
+}
+
+.foods-list {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 17px;
+    font-size: .85rem;
+    line-height: 1.5;
+}
+
+.footer {
+    font-size: .7rem;
+    color: #888;
+    text-align: center;
+    margin: 0;
+}

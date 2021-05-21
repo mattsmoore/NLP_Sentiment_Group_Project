@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath,tikz,pgfplots,pdfpages,graphicx}
+\usepackage[document]{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz}
+\doublespacing
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+
+\title{ CSCI 4152/6509  \\ P1 \\}
+\author{Ziyu Qiu, B00791470 \\ Cooper Gagnon, B00767631 \\ Matthew Moore, B00767194}
+
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\section*{Project Title:}
+Sentiment Analysis of Named Entities Taken From Live RSS News Feeds
+\end{center}
+
+\begin{center}
+\section*{Problem Statement:}
+Record average sentiment of given named entities within a large news dataset. This custom dataset will be created from scraping several thousand news RSS feeds. Potentially research how sentiment of named entities changes overtime.
+\end{center}
+
+\newpage
+\section{Project Plan:}
+\subsection{Acquire Testing Data}
+
+As for an existing dataset, we are planning to use a data set containing 1 million news headlines \cite{Kaggle}. We can use this as our initial training set. After we have successfully implemented a script that handles average sentiment analysis of named entities on this data set, we will then move onto testing on 'live data' (Covered in Create Custom Dataset).
+
+\subsection{Implement Named Entity Extraction}
+
+Using the NLTK library we will tag all the words using a POS tagger from NLTK. We will then extract all named entities within a given sentence which we will use later to link to a sentiment analysis.
+
+\subsection{Implement Average Named Entity Sentiment Analysis}
+
+We need to take each sentence and get its score using NLTK's sentiment analysis library \cite{Sentiment}. We will link these sentiment values to the named entities of the given sentence. We will then record all the sentiments as an average in a hash array using named entities as keys.
+
+\subsection{Create Custom Dataset}
+
+Using a text list of all news websites used by Google News we need to scrape all the websites to find their RSS feeds \cite{GoogleNewsBlog}. We then need to scrape all of the RSS feeds in order to create a live data set that is relevant to the current date.
+
+\subsection{Create User Interface for Searching Named Entities}
+
+We will create a basic interface by which we can search for a given named entity and receive its average sentiment analysis over the entire dataset.
+
+\section{Relevant Work and Approaches}
+
+\begin{itemize}
+\item{ \url{https://www.ijcaonline.org/archives/volume178/number46/oswal-2019-ijca-919367.pdf} }
+\begin{itemize}
+\item Average sentiment analysis of named entities found on twitter.
+\end{itemize}
+\end{itemize}
+
+\begin{thebibliography}{10}
+
+\bibitem{GoogleNewsBlog} Agarwal Amit, `Which Sites and Blogs are Indexed by Google News?', July. 2011 \url{https://www.labnol.org/internet/sites-indexed-in-google-news/19323/}
+
+\bibitem{Kaggle} Kulkarni Rohit `A Million News Headlines' Kaggle, Feb. 2021, \url{https://www.kaggle.com/therohk/million-headlines}
+
+\bibitem{Sentiment} Sentiment Analysis \url{https://www.nltk.org/howto/sentiment.html}
+
+\bibitem{NewsBoat} Newsboat. “Newsboat RSS feed reader.” GitHub, \url{github.com/newsboat/newsboat}
+
+
+
+\end{thebibliography}
+
+\end{document}
