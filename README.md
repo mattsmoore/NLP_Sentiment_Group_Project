@@ -13,5 +13,5 @@ Please read the readme found in the rss collection folder to learn how we got ou
 
 Matthew Moore: https://github.com/mattsmoore <br>
 Cooper Gagnon: https://github.com/copoer <br>
-Ziyu Qiu: 
+Amous Qiu: https://github.com/AmousQiu
 
